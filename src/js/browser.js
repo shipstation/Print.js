@@ -12,7 +12,7 @@ module.exports = {
   // Chrome 1+
   isChrome: function () {
     return !!window.chrome && !!window.chrome.webstore
-  }
+  },
 
   // Opera 8.0+
   // let isOpera = (!!window.opr && !!opr.addons) || !!window.opera || navigator.userAgent.indexOf(' OPR/') >= 0
@@ -21,5 +21,7 @@ module.exports = {
   // let isSafari = Object.prototype.toString.call(window.HTMLElement).indexOf('Constructor') > 0
 
   // Edge 20+
-  // let isEdge = !isIE && !!window.StyleMedia
+  isEdge () {
+    return !this.isIE() && !!window.StyleMedia;
+  }, 
 }
