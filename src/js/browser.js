@@ -21,7 +21,7 @@ module.exports = {
   // let isSafari = Object.prototype.toString.call(window.HTMLElement).indexOf('Constructor') > 0
 
   // Edge 20+
-  isEdge () {
+  isEdge: function () {
     return !this.isIE() && !!window.StyleMedia;
   }, 
 }
